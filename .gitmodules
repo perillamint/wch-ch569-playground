@@ -1,0 +1,6 @@
+[submodule "ch569-hal"]
+	path = ch569-hal
+	url = git@github.com:CyberSiliconForest/ch569-hal.git
+[submodule "ch569-pac"]
+	path = ch569-pac
+	url = git@github.com:CyberSiliconForest/ch569-pac.git

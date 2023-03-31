@@ -1,0 +1,9 @@
+[target.'cfg(all(target_arch = "riscv", target_os = "none"))']
+#runner = "probe-run --chip STM32WB55REVx" # to list chips, run `probe-run --list-chips.`
+rustflags = [
+  "-C", "link-arg=-Tlink.x",
+  "-C", "link-arg=-Tdefmt.x",
+]
+
+[build]
+target = "riscv32imac-unknown-none-elf"

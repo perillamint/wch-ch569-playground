@@ -1,0 +1,21 @@
+
+/**
+ * CH569 memory map
+ *
+ * Note this is using 96K RAMX and 32K zero wait state flash configuration
+ * This configuration must be set on the device first
+ */
+
+MEMORY
+{
+    FLASH : ORIGIN = 0x00000000, LENGTH = 448K
+    RAMS : ORIGIN = 0x20000000, LENGTH = 16K
+    RAMX : ORIGIN = 0x20020000, LENGTH = 96K
+}
+
+REGION_ALIAS("REGION_TEXT", FLASH);
+REGION_ALIAS("REGION_RODATA", FLASH);
+REGION_ALIAS("REGION_DATA", RAMX);
+REGION_ALIAS("REGION_BSS", RAMX);
+REGION_ALIAS("REGION_HEAP", RAMX);
+REGION_ALIAS("REGION_STACK", RAMS);
